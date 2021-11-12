@@ -1,5 +1,5 @@
 title: Hi
-baseurl: /jekyll-text
+baseurl: /jekyll-test
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
