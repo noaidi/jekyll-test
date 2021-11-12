@@ -1,4 +1,5 @@
 title: Hi
+baseurl: /jekyll-text
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
