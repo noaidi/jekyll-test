@@ -74,7 +74,7 @@ http://127.0.0.1:4000
 
 ## 테마 설정
 
-###### https://github.com/topics/jekyll-theme
+###### https://pages.github.com/themes/
 
 ```sh
 bundle add THEME-GEM-NAME
