@@ -46,9 +46,7 @@ gem install jekyll
 
 ----
 
-## Create Jekyll
-
-### Create jekyll project
+### 프로젝트 생성
 ```sh
 mkdir PROJECT
 cd PROJECT
@@ -74,7 +72,7 @@ http://127.0.0.1:4000
 
 ----
 
-## Theme 설정
+## 테마 설정
 
 ###### https://github.com/topics/jekyll-theme
 
