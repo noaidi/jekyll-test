@@ -38,6 +38,33 @@ brew install ruby
 PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 PATH=$(gem environment gemdir)/bin:$PATH
 ```
+혹은
+``` sh
+# Homebrew
+# -------------------------------------------------------------------------
+# Uninstall homebrew
+# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
+# Install homebrew
+# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+brew=/opt/homebrew/bin/brew
+if [ -x $brew ]; then
+	eval "$($brew shellenv)"
+	brew_prefix=$($brew --prefix)
+	if [ -f $brew_prefix/etc/bash_completion ]; then
+		. $brew_prefix/etc/bash_completion
+	fi
+
+	# ruby
+	ruby_prefix=$brew_prefix/opt/ruby
+	if [ -d $ruby_prefix/bin ]; then
+		PATH="$ruby_prefix/bin:$PATH"
+		if [ -x $ruby_prefix/bin/gem ]; then
+			PATH=$($ruby_prefix/bin/gem environment gemdir)/bin:$PATH
+		fi
+	fi
+fi
+```
 
 ### `jekyll` 설치
 ```sh
